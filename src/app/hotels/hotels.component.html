@@ -1,15 +1,12 @@
 <div class="row">
   <div class="col-sm-6" *ngFor="let hotel of hotels">
-    <div class="card border-dark">
+    <div class="card border-dark" [class.bg-primary]="hotel===selectedHotel" [class.text-white]="hotel===selectedHotel" (click)="selectHotel(hotel)">
       <div class="card-body">
         <h5 class="card-title">{{hotel.name}}</h5>
-        <p class="card-text" *ngIf="hotel===selectedHotel">
-          <input [(ngModel)]="hotel.name" class="form-control">
-        </p>
-        <button class="btn btn-primary btn-sm" (click)="selectHotel(hotel)">
-          <i class="fa fa-pencil-alt"></i> Edit</button>
       </div>
     </div>
     <br>
   </div>
 </div>
+<hr>
+<app-hotel-details [hotel]="selectedHotel"></app-hotel-details>
