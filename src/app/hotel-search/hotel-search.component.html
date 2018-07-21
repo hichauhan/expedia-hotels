@@ -1,0 +1,8 @@
+<input type="text" class="form-control" placeholder="Search hotels..." #searchBox (keyup)="search(searchBox.value)">
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let hotel of hotels$ | async">
+    <a routerLink="/hotel-details/{{hotel.id}}">
+      {{hotel.name}}
+    </a>
+  </li>
+</ul>

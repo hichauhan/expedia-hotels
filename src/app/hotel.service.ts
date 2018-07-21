@@ -65,4 +65,15 @@ export class HotelService {
         catchError(this.handleError(`delete Hotel`))
       );
   }
+
+  searchHotels(term: string): Observable<Hotel[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hotel array.
+      return of([]);
+    }
+    return this.http.get<Hotel[]>(`${this.hotelsUrl}/?name=${term}`).pipe(
+      tap(_ => console.log(`found hotels matching "${term}"`)),
+      catchError(this.handleError<Hotel[]>('searchHotels', []))
+    );
+  }
 }

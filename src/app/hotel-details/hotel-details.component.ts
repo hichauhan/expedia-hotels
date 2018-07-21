@@ -20,10 +20,10 @@ export class HotelDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getHero();
+    this.getHotel();
   }
 
-  getHero(): void {
+  getHotel(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.hotelService.getHotel(id)
       .subscribe(hotel => this.hotel = hotel);
