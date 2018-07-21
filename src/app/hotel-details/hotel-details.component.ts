@@ -29,6 +29,11 @@ export class HotelDetailsComponent implements OnInit {
       .subscribe(hotel => this.hotel = hotel);
   }
 
+  save(): void {
+    this.hotelService.update(this.hotel)
+      .subscribe(() => this.goBack());
+  }
+
   goBack(): void {
     this.location.back();
   }
