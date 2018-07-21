@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hotel } from '../hotel';
-
-import { HOTELS } from '../mock-hotels';
+import { HotelService } from '../hotel.service';
 
 @Component({
   selector: 'app-hotels',
@@ -10,16 +9,22 @@ import { HOTELS } from '../mock-hotels';
 })
 export class HotelsComponent implements OnInit {
 
-  hotels = HOTELS;
+  hotels: Hotel[];
   selectedHotel;
 
-  constructor() { }
+  constructor(private hotelService: HotelService) { }
 
   ngOnInit() {
+    this.getHotels();
   }
 
   selectHotel(hotel): void {
     this.selectedHotel = hotel;
+  }
+
+  getHotels(): void {
+      this.hotelService.getHotels()
+        .subscribe(hotels => this.hotels = hotels);
   }
 
 }
