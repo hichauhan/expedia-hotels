@@ -8,4 +8,5 @@ export const HOTELS: Hotel[] = [
     {id:5, name:"Taj Mahal Hotel"},
     {id:6, name:"Eros Hotel"},
     {id:7, name:"The Leela Palace Hotel"},
+    {id:8, name:"Hilton Garden Inn"},
 ]

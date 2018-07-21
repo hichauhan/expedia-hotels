@@ -1,6 +1,6 @@
-<div *ngIf="hotel">
-  <h2>{{hotel.name}}</h2>
-  <p>
-    <input [(ngModel)]="hotel.name" class="form-control">
-  </p>
-</div>
+<h2>
+  {{hotel.name}}</h2>
+<p>
+  <input [(ngModel)]="hotel.name" class="form-control">
+</p>
+<button (click)="goBack()" class="btn btn-dark">Cancel</button>

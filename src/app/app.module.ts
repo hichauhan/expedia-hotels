@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HotelsComponent,
-    HotelDetailsComponent
+    HotelDetailsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

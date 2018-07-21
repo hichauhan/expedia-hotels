@@ -1,8 +1,17 @@
-<nav class="navbar navbar-dark bg-dark sticky-top">
-  <span class="navbar-brand mb-0 h1">{{title}}</span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+  <span class="navbar-brand h1" href="#">Expedia Hotels</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbar">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/dashboard">Dashboard</a>
+      <a class="nav-item nav-link" routerLink="/hotels">Hotels</a>
+    </div>
+  </div>
 </nav>
 <br>
 <div class="container">
-  <app-hotels></app-hotels>
+  <router-outlet></router-outlet>
 </div>
-

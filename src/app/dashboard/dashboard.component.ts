@@ -3,12 +3,11 @@ import { Hotel } from '../hotel';
 import { HotelService } from '../hotel.service';
 
 @Component({
-  selector: 'app-hotels',
-  templateUrl: './hotels.component.html',
-  styleUrls: ['./hotels.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class HotelsComponent implements OnInit {
-
+export class DashboardComponent implements OnInit {
   hotels: Hotel[];
 
   constructor(private hotelService: HotelService) { }
@@ -18,8 +17,8 @@ export class HotelsComponent implements OnInit {
   }
 
   getHotels(): void {
-      this.hotelService.getHotels()
-        .subscribe(hotels => this.hotels = hotels);
+    this.hotelService.getHotels()
+      .subscribe(hotels => this.hotels = hotels.slice(1, 3));
   }
 
 }

@@ -13,4 +13,8 @@ export class HotelService {
   getHotels(): Observable<Hotel[]> {
     return of(HOTELS);
   }
+
+  getHotel(id: number): Observable<Hotel> {
+    return of(HOTELS.find(hero => id == hero.id));
+  }
 }
