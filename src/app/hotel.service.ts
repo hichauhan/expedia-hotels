@@ -43,8 +43,26 @@ export class HotelService {
   update(hotel: Hotel): Observable<any> {
     return this.http.put(this.hotelsUrl, hotel, this.httpOptions)
       .pipe(
-        tap(_ => console.log(`updated hero: ${hotel.id}`)),
+        tap(_ => console.log(`updated Hotel: ${hotel.id}`)),
         catchError(this.handleError(`update hotel id=${hotel.id}`))
+      );
+  }
+
+  addHotel(hotel: Hotel): Observable<Hotel> {
+    return this.http.post<Hotel>(this.hotelsUrl, hotel, this.httpOptions)
+      .pipe(
+        tap((hotel: Hotel) => console.log(`added Hotel: ${hotel.id}`),
+        catchError(this.handleError(`add hotel`))
+      ));
+  }
+
+  deleteHotel(hotel: Hotel): Observable<any> {
+    const id = hotel.id;
+    const url = `${this.hotelsUrl}/${id}`;
+    return this.http.delete<Hotel>(url, this.httpOptions)
+      .pipe(
+        tap(_ => console.log(`deleted hotel: ${hotel.id}`)),
+        catchError(this.handleError(`delete Hotel`))
       );
   }
 }

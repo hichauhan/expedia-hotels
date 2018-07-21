@@ -22,4 +22,11 @@ export class HotelsComponent implements OnInit {
         .subscribe(hotels => this.hotels = hotels);
   }
 
+  addHotel(name: String): void {
+    name = name.trim();
+    if (!name) return;
+    this.hotelService.addHotel({name} as Hotel)
+      .subscribe(hotel => this.hotels.push(hotel));
+  }
+
 }

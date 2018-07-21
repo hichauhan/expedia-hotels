@@ -1,5 +1,11 @@
 <h2>Hotels</h2>
 <hr>
+<div class="form-group">
+  <label>Add new hotel:</label>
+  <input #hotelName class="form-control" /><br>
+  <button class="btn btn-success" (click)="addHotel(hotelName.value); hotelName.value=''">Add</button> 
+</div>
+<hr>
 <div class="row">
   <div class="col-sm-6" *ngFor="let hotel of hotels">
     <div class="card border-dark" (click)="selectHotel(hotel)">

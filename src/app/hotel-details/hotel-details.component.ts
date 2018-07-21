@@ -34,6 +34,11 @@ export class HotelDetailsComponent implements OnInit {
       .subscribe(() => this.goBack());
   }
 
+  delete(): void {
+    this.hotelService.deleteHotel(this.hotel)
+      .subscribe(() => this.goBack());
+  }
+
   goBack(): void {
     this.location.back();
   }
