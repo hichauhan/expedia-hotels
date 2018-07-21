@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HotelDetailsComponent } from './hotel-details/hotel-details.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
