@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Hotel } from '../hotel';
 
+import { HOTELS } from '../mock-hotels';
+
 @Component({
   selector: 'app-hotels',
   templateUrl: './hotels.component.html',
@@ -8,14 +10,16 @@ import { Hotel } from '../hotel';
 })
 export class HotelsComponent implements OnInit {
 
-  hotel: Hotel = {
-    id: 1,
-    name: "Crown Plaza"
-  };
+  hotels = HOTELS;
+  selectedHotel;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectHotel(hotel): void {
+    this.selectedHotel = hotel;
   }
 
 }
