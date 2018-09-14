@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs'; 
+import { Observable, Subject } from 'rxjs';
 import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
@@ -21,7 +21,7 @@ export class HotelSearchComponent implements OnInit {
   ngOnInit() {
     this.hotels$ = this.searchTerms.pipe(
       debounceTime(300), // wait 300ms after each keystroke
-      distinctUntilChanged(), //ignore same values
+      distinctUntilChanged(), // ignore same values
       switchMap((term: string) => this.hotelService.searchHotels(term))
     );
   }

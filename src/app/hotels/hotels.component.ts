@@ -24,7 +24,7 @@ export class HotelsComponent implements OnInit {
 
   addHotel(name: String): void {
     name = name.trim();
-    if (!name) return;
+    if (!name) { return; }
     this.hotelService.addHotel({name} as Hotel)
       .subscribe(hotel => this.hotels.push(hotel));
   }

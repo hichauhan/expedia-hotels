@@ -1,9 +1,9 @@
-<h2>Hotels</h2>
+<h2 class="display-4">Hotels</h2>
 <hr>
 <div class="form-group">
   <label>Add new hotel:</label>
-  <input #hotelName class="form-control" /><br>
-  <button class="btn btn-success" (click)="addHotel(hotelName.value); hotelName.value=''">Add</button> 
+  <input #hotelName class="form-control" placeholder="Enter hotel name"><br>
+  <button class="btn btn-success" (click)="addHotel(hotelName.value); hotelName.value=''"><i class="fa fa-plus-circle"></i> Add</button> 
 </div>
 <hr>
 <div class="row">
@@ -11,7 +11,7 @@
     <div class="card border-dark" (click)="selectHotel(hotel)">
       <div class="card-body">
         <h5 class="card-title">{{hotel.name}}</h5>
-        <a routerLink="/hotel-details/{{hotel.id}}" class="card-link"><i class="fa fa-pencil-alt"></i> Edit</a>
+        <a routerLink="/hotel-details/{{hotel.id}}" class="card-link btn btn-primary"><i class="fa fa-pencil-alt"></i> Edit</a>
       </div>
     </div>
     <br>
