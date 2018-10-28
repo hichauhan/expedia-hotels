@@ -1,6 +1,6 @@
-# ExpediaHotels
+# Expedia Hotels
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This project was used in a live demo in an Angular Knowledge Transfer session given by me at Expedia
 
 ## Development server
 
