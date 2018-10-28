@@ -2,3 +2,25 @@
 body, html {
   font-family: 'Raleway' !important;
 }
+
+.navbar {
+  background-color: #5D1049;
+}
+
+.content {
+  background-color: #5D1049;
+}
+
+.content .content-card {
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.btn, .form-control, .card {
+  border-radius: 2em;
+}
+
+.btn-primary, .btn-primary.active, .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:visited {
+  background-color: #720D5D;
+  border-color: #720D5D;
+}
