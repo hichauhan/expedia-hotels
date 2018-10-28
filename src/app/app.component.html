@@ -1,18 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-dark shadow-md">
-  <div class="container">
-    <span class="navbar-brand" href="#">Expedia Hotels</span>
-    <div class="collapse navbar-collapse" id="navbar">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/dashboard"><i class="fa fa-columns"></i> Dashboard</a>
-        <a class="nav-item nav-link" routerLink="/hotels"><i class="fa fa-hotel"></i> Hotels</a>
+<div class="wrapper">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-md">
+    <div class="container">
+      <span class="navbar-brand" href="#">Expedia Hotels</span>
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" routerLink="/dashboard"><i class="fa fa-columns"></i> Dashboard</a>
+          <a class="nav-item nav-link" routerLink="/hotels"><i class="fa fa-hotel"></i> Hotels</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="content shadow-md">
+    <div class="content-card">
+      <div class="container p-3">
+        <router-outlet></router-outlet>
       </div>
     </div>
   </div>
-</nav>
-<div class="content">
-  <div class="content-card">
-    <div class="container p-3">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
 </div>
+
+<footer class="footer shadow-md">
+  <div class="container">
+    <span>&copy; 2018 | Himanshu Chauhan</span>
+  </div>
+</footer>
